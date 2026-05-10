@@ -13,7 +13,7 @@ const RATE_LIMIT = 3;
 const WINDOW_MS = 60 * 60 * 1000;
 
 function getClientIp(request: NextRequest): string {
-  return request.headers.get('x-forwarded-for')?.split(',')[0] || request.headers.get('x-real-ip') || request.ip || 'unknown';
+  return request.headers.get('x-forwarded-for')?.split(',')[0] || request.headers.get('x-real-ip') || 'unknown';
 }
 
 function checkRateLimit(ip: string): boolean {
