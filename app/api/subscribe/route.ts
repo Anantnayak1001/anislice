@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
 
     const { error: insertError } = await supabase
       .from('waitlist_emails')
-      .insert([{ email_hash: hashedEmail, created_at: new Date().toISOString() }]);
+      .insert([{ email_hash: hashedEmail, email: email.toLowerCase().trim(), created_at: new Date().toISOString() }]);
 
     if (insertError) {
       console.error('Insert error:', insertError);
