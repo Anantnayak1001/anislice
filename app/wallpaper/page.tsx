@@ -49,13 +49,9 @@ export default function WallpapersPage() {
           <h2 className="text-4xl font-bold text-white mb-3">You're in!</h2>
           <p className="text-purple-200 text-lg mb-8">All 3 wallpapers are ready.</p>
           
-            href="https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_ID"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-10 rounded-xl transition-all transform hover:scale-105 text-lg mb-8 shadow-lg shadow-purple-500/25"
-          >
-            ⬇️ Download All Wallpapers
-          </a>
+            <a href="https://drive.google.com/uc?export=download&id=1ZKQhxnxi0gnEwUjexK0Haqyv1uVVIEm0" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-4 px-10 rounded-xl mb-8">
+  Download All Wallpapers
+</a>
           <div className="grid grid-cols-3 gap-3 mb-6">
             {wallpapers.map((wp) => (
               <div key={wp.id} className="relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-800">
